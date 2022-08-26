@@ -53,7 +53,7 @@ export default {
   '/v1/searchAllProduction': {
     post: {
       tags: ['Production'],
-      description: 'Produção do Més',
+      description: 'Produção do Mês',
       parameters: [
         {
           in: 'header',
