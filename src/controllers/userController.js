@@ -15,7 +15,7 @@ export default {
     try {
       const user = req.body
       const result = await loginUserRepository.execute(user)
-      return res.status(201).json(result)
+      return res.status(200).json(result)
     } catch (error) {
       return res.status(400).json({ error: 'login failed' })
     }

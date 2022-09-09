@@ -1,8 +1,8 @@
 export default {
   '/v1/farmRegister': {
     post: {
-      summary: 'Action registration',
-      description: 'Register a Action',
+      summary: 'Register a farm',
+      description: 'Register a farm',
       tags: ['Farm'],
       parameters: [
         {
@@ -48,7 +48,7 @@ export default {
   '/v1/searchAllFarms': {
     get: {
       tags: ['Farm'],
-      description: '',
+      description: 'find all farms!!!',
       parameters: [
         {
           in: 'header',

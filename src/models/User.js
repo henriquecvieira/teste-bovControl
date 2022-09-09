@@ -1,14 +1,12 @@
 import mongoose from 'mongoose'
-import { v4 as uuidv4 } from 'uuid'
-import randomInteger from 'random-int'
+
 
 const { model, Schema } = mongoose
 
 const schema = new Schema({
 
   _id: {
-    type: String,
-    default: uuidv4()
+    type: String
   },
   farmer: {
     type: String,
@@ -25,12 +23,10 @@ const schema = new Schema({
     select: false
   },
   createdAt: {
-    type: Date,
-    default: Date.now
+    type: Date
   },
   farmerCod: {
-    type: Number,
-    default: randomInteger(100, 100000)
+    type: Number
   }
 })
 

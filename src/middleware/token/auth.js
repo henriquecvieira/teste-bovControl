@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const auth = async (req, res, next) => {
+const auth = async function (req, res, next) {
   const authToken = req.headers?.authorization
   if (!authToken) {
     res.status(400).json({ err: 'token não localizado' })
@@ -17,7 +17,7 @@ const auth = async (req, res, next) => {
     res.status(result.code).json({ err: 'Não autorizado' })
   }
 }
-const validateToken = async (params) => {
+const validateToken = async function (params) {
   try {
     let resultValidate
     if (params !== undefined) {
